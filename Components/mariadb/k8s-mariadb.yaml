@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: mariadb
 spec:
+  # 使用ClusterIP时仅集群内部可访问，如果需要开放给集群外部则需要改成NodePort或LoadBalancer
   type: ClusterIP
   ports:
   - name: mysql
@@ -30,7 +31,7 @@ spec:
         app: mariadb
     spec:
       serviceAccountName: mariadb
-      # Other kinds of PersistentVolumes all also supported
+      # 这里使用了hostPath，也可以使用PersistentVolume
       volumes:
       - name: datavolume
         hostPath:

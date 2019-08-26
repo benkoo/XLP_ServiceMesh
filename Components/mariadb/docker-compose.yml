@@ -1,0 +1,17 @@
+# MariaDB can should be installed alongside all other services
+# In the inner network created by docker-compose, the URL will be 'mariadb' instead of 'localhost' or any other names, which is the same with the name of service
+
+version: '2'
+services:
+  mariadb:
+    image: mariadb:10.3
+    restart: always
+    # It is not necessary to expose the ports, unless you need to access it outside of the system
+    #ports:
+    #- 3306:3306
+    environment:
+    - MYSQL_ROOT_PASSWORD=MyRootPassword
+    - MYSQL_USER=user
+    - MYSQL_PASSWORD=MyUserPassword
+    volumes:
+    - /data/mariadb/:/var/lib/mysql

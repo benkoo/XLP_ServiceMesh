@@ -1,0 +1,13 @@
+version: '2'
+services:
+  kibana:
+    #image: docker.elastic.co/kibana/kibana-oss:6.5.2
+    build:
+      context: ./
+    volumes:
+      - ./kibana/config/:/usr/share/kibana/config:ro
+    ports:
+      - "5601:5601"
+    networks:
+      - elk
+      

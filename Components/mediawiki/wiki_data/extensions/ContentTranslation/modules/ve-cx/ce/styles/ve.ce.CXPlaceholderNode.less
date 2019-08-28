@@ -1,0 +1,35 @@
+@import '../../../widgets/common/ext.cx.common.less';
+
+.ve-ce-cxPlaceholderNode {
+	background-color: @colorGray15;
+	color: @colorGray7;
+	opacity: 0;
+	display: table;
+	width: 100%;
+	box-shadow: 0 0 0 4px @colorGray15;
+	font-size: 20px;
+	text-align: center;
+	.transition( opacity 100ms ease-out );
+
+	&.ve-ce-focusableNode-focused {
+		opacity: 1;
+	}
+
+	> .oo-ui-buttonWidget {
+		opacity: 0.5;
+	}
+
+	> .oo-ui-buttonWidget,
+	> .cx-spinner {
+		display: table-cell;
+		margin: 0;
+		vertical-align: middle;
+	}
+}
+
+// We don't want to show the placeholder during publishing,
+// so content container is checked if it's disabled.
+.cx-content-container:not( .oo-ui-widget-disabled ) .ve-ce-cxPlaceholderNode:hover {
+	cursor: pointer;
+	opacity: 1;
+}

@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"JinJian"
+		]
+	},
+	"cx-publish-button-publishing": "Ginmamantala...",
+	"cx-entrypoint-dialog-button-translate-from": "Ighubad tikang $1",
+	"cx-tools-searchbox-text": "Pagbiling hin pulong",
+	"cx-tools-link-title": "Sumpay",
+	"cx-tools-link-add": "Dugnga hin sumpay",
+	"cx-tools-link-remove": "Tanggala an sumpay",
+	"cx-tools-mt-provider-title": "Tikang $1",
+	"cx-publish-captcha-title": "Pan-seguridad nga pakiana",
+	"cx-dashboard-sidebar-title": "{{GENDER:|Kinahanglan}} mo hin bulig ha mga paghubad?",
+	"cx-translation-filter-suggested-translations": "Mga suhestyon",
+	"cx-suggestionlist-favorite": "Para nuruniyan",
+	"cx-contributions-new-article": "Bag-o nga pakli",
+	"cx-contributions-translation": "Paghubad",
+	"cx-translation-status-deleted": "Ginpara",
+	"cx-campaign-no-thanks": "Diri, salamat nala"
+}

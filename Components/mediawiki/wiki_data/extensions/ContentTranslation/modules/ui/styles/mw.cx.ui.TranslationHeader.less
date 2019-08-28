@@ -1,0 +1,99 @@
+@import '../../widgets/common/ext.cx.common.less';
+
+.cx-translation-view-header {
+	.mw-ui-one-whole;
+
+	padding: 0;
+	/* Trick to get items vertically aligned */
+	line-height: 3;
+	min-height: 3em;
+
+	background-color: @white;
+	border-bottom: 1px solid @colorGray14;
+	border-radius: @borderRadius @borderRadius 0 0;
+
+	z-index: 2;
+	// Adding additional class only to beat OOUI specificity
+	&.oo-ui-panelLayout {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		/* Force the browser to use hardware acceleration to access
+		 the device’s GPU so that sticky transitions are smooth and avoid flickering */
+		transform: translateZ( 0 );
+	}
+
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: @personal-header-padding;
+		width: calc( 66.666% ~'-' 4 * @personal-header-padding / 3 );
+		.box-shadow( 0 1px 1px rgba( 0, 0, 0, 0.15 ) );
+
+		@media only screen and ( min-width: ( @wide + 0.1 * @max-tools-column-width ) ) {
+			width: calc( 100% ~'-' @max-tools-column-width ~'-' 2 * @personal-header-padding );
+		}
+
+		.cx-header__publish-button.oo-ui-buttonElement.oo-ui-labelElement > .oo-ui-buttonElement-button {
+			border-radius: 0;
+		}
+	}
+
+	.cx-header__translation-center {
+		.mw-ui-one-third;
+		min-height: 3em;
+		margin: 0;
+		line-height: 3;
+
+		.oo-ui-buttonElement-button {
+			min-height: 3em;
+			border-right: 1px solid @colorGray14;
+			border-radius: 0; // Override monobook button border radius
+			padding: 0 1em 0 0;
+			line-height: 3;
+
+			.oo-ui-labelElement-label {
+				color: @colorGray5;
+			}
+		}
+	}
+
+	.cx-header-draft-status {
+		.mw-ui-one-third;
+
+		color: @colorGray5;
+		// Remove padding added by LabelWidget on monobook
+		padding-top: 0;
+		padding-bottom: 0;
+		text-align: center;
+	}
+	.cx-header-tools-container {
+		float: right;
+		margin: 0;
+	}
+	.cx-header__publish-button {
+		margin: 0;
+
+		@media only screen and ( min-width: @narrow ) {
+			margin: 0 0 0 0.5em;
+		}
+
+		&.oo-ui-buttonElement.oo-ui-labelElement > .oo-ui-buttonElement-button {
+			border-radius: 0 @borderRadius 0 0;
+			padding: 0.5em 1em;
+			line-height: 2;
+		}
+	}
+}
+
+/* HACK: Webkit browsers need weird hacks to make 'position: sticky' usable and not have annoying UX.
+One was flickering (solved above with translateZ(0)) and other is 1px displacement from top,
+even though property is set to 'top: 0'.
+@supports annotation needs to be at the top level, and we check for 'position: sticky' support,
+not to affect other browsers that use 'position: fixed' fallback.
+'-webkit-appearance: none' is the trick to target only webkit based browsers */
+@supports ( ( position: sticky ) or ( position: -webkit-sticky ) ) and ( -webkit-appearance: none ) {
+	.cx-translation-view-header.oo-ui-panelLayout {
+		top: -1px;
+	}
+}

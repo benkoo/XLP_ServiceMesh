@@ -1,0 +1,71 @@
+@import '../../widgets/common/ext.cx.common.less';
+
+.card.dictionary {
+	animation-name: card-show-animation;
+	animation-duration: 0.5s;
+	position: relative;
+}
+
+.card__title-row {
+	.mw-ui-item;
+	.mw-ui-one-whole;
+	color: @colorGray12;
+	font-size: medium;
+	padding-top: 8px;
+}
+
+.card__headword {
+	@vertical-margin: 10px;
+	@horizontal-margin: 15px;
+	.mw-ui-item;
+	.mw-ui-one-whole;
+	float: none; // XXX why would it be needed?
+	padding: @vertical-margin @horizontal-margin;
+	font-size: x-large;
+	font-weight: lighter;
+	line-height: 1.5em;
+	color: @colorGray5;
+}
+
+.card__definition {
+	@vertical-margin: 10px;
+	@horizontal-margin: 15px;
+	.mw-ui-item;
+	.mw-ui-one-whole;
+	float: none; // XXX why would it be needed?
+	padding: @vertical-margin @horizontal-margin;
+	line-height: 1.5em;
+	color: @colorGray5;
+}
+
+.card__translations {
+	.mw-ui-item;
+	.mw-ui-one-whole;
+	float: none; // XXX why would it be needed?
+
+	.card__translation {
+		@vertical-margin: 10px;
+		@horizontal-margin: 15px;
+		margin: 0 5px;
+		padding: 5px;
+		display: inline-block;
+		font-size: large;
+		line-height: 1.5em;
+		color: @colorGray5;
+		border-radius: @borderRadius;
+
+		&:hover {
+			background-color: @colorGray14;
+			color: @colorGray2;
+		}
+	}
+}
+
+.card__expand {
+	.mw-ui-item;
+	.mw-ui-one-whole;
+	float: none; // XXX why would it be needed?
+	clear: both;
+	padding: 5px;
+	text-align: center;
+}

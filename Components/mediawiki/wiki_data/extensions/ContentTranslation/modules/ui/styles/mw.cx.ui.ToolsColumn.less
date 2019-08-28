@@ -1,0 +1,67 @@
+@import '../../widgets/common/ext.cx.common.less';
+
+.cx-column.cx-column-tools {
+	.mw-ui-one-third;
+	.mw-ui-one-whole(@palm);
+
+	background-color: @colorGray14;
+	float: left;
+	padding: 0 0 0 @tools-column-margin;
+
+	position: -webkit-sticky;
+	position: sticky;
+	top: 20px;
+
+	/* Force the browser to use hardware acceleration to access
+	 the device’s GPU so that sticky transitions are smooth and avoid flickering */
+	transform: translateZ( 0 );
+
+	&.sticky {
+		position: fixed;
+		top: 20px;
+		right: @personal-header-padding;
+		// Trick to accomodate to different width calculations when position is set to fixed
+		border-left: 2 * @personal-header-padding / 3 solid transparent;
+
+		@media @palm {
+			.stick-to-bottom;
+		}
+	}
+
+	@media @palm {
+		.stick-to-bottom;
+	}
+
+	@media only screen and ( min-width: ( @wide + 0.1 * @max-tools-column-width ) ) {
+		width: @max-tools-column-width;
+		&.sticky {
+			border-left: 0;
+		}
+	}
+
+	.cx-column-tools-container {
+		display: flex;
+		flex-direction: column;
+
+		.ve-cx-toolbar-link,
+		.ve-cx-toolbar-insert,
+		.ve-cx-toolbar-structure,
+		.ve-cx-toolbar-style {
+			border-right: 0;
+		}
+
+		.ve-cx-toolbar-insert {
+			float: right;
+		}
+	}
+
+	.cx-tools-editing-toolbar-container:not( :empty ) {
+		margin-bottom: 20px;
+		font-size: 0.875em;
+
+		.oo-ui-toolbar-position-top > .oo-ui-toolbar-bar {
+			border-radius: 2px;
+		}
+	}
+
+}

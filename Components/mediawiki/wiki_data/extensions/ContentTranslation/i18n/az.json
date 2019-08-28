@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mavrikant",
+			"Wertuose",
+			"Amire80"
+		]
+	},
+	"cx": "Səhifəni tərcümə et",
+	"cx-dashboard-header": "Tərcümələr",
+	"cx-javascript": "Bu alət JavaScript olmadan işləmir.",
+	"cx-error-server-connection": "Səhv: Serverə qoşulmaq mümkün olmadı.",
+	"cx-header-progressbar-text": "{{PLURAL:$1|Tərcümə}} $1% icra edilib",
+	"cx-header-progressbar-text-mt": "($1% {{PLURAL:$1|maşın tərcüməsi}})",
+	"cx-header-translation-center": "Tərcümə mərkəzi",
+	"cx-header-all-translations": "Bütün tərcümələr",
+	"cx-source-view-page": "səhifəyə bax",
+	"cx-beta": "Məzmun tərcüməsi",
+	"cx-beta-desc": "Başqa dildəki səhifələri öz dilinizə asanlıqla tərcümə etmək üçün alət. Tərcümələrə [[Special:MyContributions|öz fəaliyət səhifənizdən]] başlaya bilər və tərcümə üçün xüsusi yaratdığımız yanbayan redaktə pəncərələri vasitəsilə redaktə edə bilərsiniz. Bəzi funksiyalar yalnız müəyyən dillərdə istifadəyə açıqdır.",
+	"cx-tools-link-add": "Keçid əlavə et",
+	"cx-tools-mt-title": "Maşın tərcüməsi",
+	"cx-suggestionlist-featured": "Seçilmiş",
+	"cx-contributions-new-contributions": "Yeni töhfə",
+	"cx-contributions-new-article": "Yeni səhifə",
+	"cx-contributions-translation": "Tərcümə",
+	"cx-contributions-upload": "Mediafayl yüklə",
+	"cx-contributions-new-article-tooltip": "Yeni səhifə yaradın",
+	"cx-contributions-translation-tooltip": "Mövcud səhifələri tərcümə edin",
+	"cx-contributions-upload-tooltip": "Səhifədə istifadə etmək üçün şəkil, audio və video yükləyin",
+	"cx-draft-cancel-button-label": "İmtina",
+	"cx-draft-discard-button-label": "Tərcüməni sil"
+}

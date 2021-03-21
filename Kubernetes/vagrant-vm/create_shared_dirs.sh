@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#! /bin/bash
 
 mkdir share
 mkdir share/master

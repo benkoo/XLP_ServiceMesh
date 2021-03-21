@@ -1,1 +1,0 @@
-{"virtualbox":{"/home/vagrant/share":{"guestpath":"/home/vagrant/share","hostpath":"C:/Users/koo09/Documents/Workspace/XLP_ServiceMesh/Kubernetes/vagrant-vm/share/node1","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/koo09/Documents/Workspace/XLP_ServiceMesh/Kubernetes/vagrant-vm","disabled":false,"__vagrantfile":true}}}

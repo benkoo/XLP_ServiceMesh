@@ -1,4 +1,8 @@
+#Ignore Apple temp file
 .DS_Store
+
+#Ignore .vagrant
+.vagrant
 
 #Ignore the share directory under vagrant-vm
 Kubernetes/vagrant-vm/share

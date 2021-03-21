@@ -2,7 +2,7 @@
 .DS_Store
 
 #Ignore .vagrant
-.vagrant
+.vagrant/
 
 #Ignore the share directory under vagrant-vm
 Kubernetes/vagrant-vm/share

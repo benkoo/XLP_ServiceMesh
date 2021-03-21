@@ -1,0 +1,4 @@
+.DS_Store
+
+#Ignore the share directory under vagrant-vm
+Kubernetes/vagrant-vm/share
